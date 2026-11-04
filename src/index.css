@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --color-ink: oklch(0.21 0.034 264);
+  --color-body: oklch(0.37 0.029 257);
+  --color-muted: oklch(0.5 0.027 257);
+  --color-line: oklch(0.87 0.014 254);
+  --color-paper: oklch(0.984 0.003 248);
+  --color-teal: oklch(0.5 0.09 190);
+  --color-teal-deep: oklch(0.27 0.06 200);
+  --color-teal-tint: oklch(0.93 0.035 190);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-paper text-body font-sans antialiased;
+}
+
+a:focus-visible,
+button:focus-visible {
+  @apply outline-teal outline-2 outline-offset-2;
+}
