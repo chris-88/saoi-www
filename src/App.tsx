@@ -1,187 +1,183 @@
+import { BazWordmark } from './BazWordmark';
 import { links } from './links';
 import { Wordmark } from './Wordmark';
 
 const external = { target: '_blank', rel: 'noreferrer' } as const;
 
-const doing = [
+const points = [
   {
-    title: 'Works out what you need',
-    body: 'You say what you are trying to do. Baz asks for what is missing and nothing else.',
+    number: '01',
+    title: 'Start with your life, not a product.',
+    body: 'Married, a baby on the way, hoping to buy. Say what is going on and Baz works out what it involves and which of the bank’s products fit.',
   },
   {
-    title: 'Shows all your money',
-    body: 'Accounts across your providers, in one place, so you are not adding it up in your head.',
+    number: '02',
+    title: 'Say it once.',
+    body: 'What you tell it is kept, with where it came from, and reused across every application. Three applications, one set of answers.',
   },
   {
-    title: 'Compares products',
-    body: 'Side by side, with the reasoning shown, so you can disagree with it.',
-  },
-  {
-    title: 'Keeps the case going',
-    body: 'Come back next week and Baz remembers. Bring a partner in and they see the same case.',
-  },
-];
-
-const steps = [
-  {
-    title: 'Say what you want',
-    body: 'Buying a home, switching a mortgage, getting on top of the month.',
-  },
-  {
-    title: 'Baz does the legwork',
-    body: 'It finds what it needs, looks across your providers, and lays out the options.',
-  },
-  {
-    title: 'You decide',
-    body: 'The case stays open between sessions until you have made the call.',
+    number: '03',
+    title: 'Pick up where you left off.',
+    body: 'Close the tab, change phones, come back next week. The conversation, and what the bank did in between, are waiting.',
   },
 ];
 
-const open = [
-  { label: 'baz-conversational-banking', note: 'The app', href: links.repoApp },
-  { label: 'baz-mcp', note: 'Baz as an MCP server', href: links.repoMcp },
-  { label: 'baz-showcase', note: 'The showcase site', href: links.repoShowcase },
-  { label: 'Docs', note: 'docs.saoi.ie', href: links.docs },
-  { label: 'MCP endpoint', note: 'For agents', href: links.mcp },
-  { label: 'API', note: 'OpenAPI spec', href: links.api },
+const footerLinks = [
+  { label: 'How it works', href: links.howItWorks },
+  { label: 'The article', href: links.article },
+  { label: 'The showcase', href: links.showcase },
+  { label: 'Docs', href: links.docs },
+  { label: 'GitHub', href: links.repoApp },
+  { label: 'API', href: links.api },
+  { label: 'MCP', href: links.mcp },
 ];
 
-const buttonBase =
-  'inline-flex min-h-12 items-center justify-center rounded-xl px-6 text-base font-semibold transition-colors';
+const button =
+  'inline-flex h-10 items-center justify-center gap-2 rounded-md px-6 text-sm font-medium whitespace-nowrap transition-colors';
+const primary = `${button} bg-teal text-white hover:bg-teal/90`;
+const outline = `${button} border-line text-ink border bg-white shadow-xs hover:bg-teal-tint`;
+const ghost = `${button} text-ink hover:bg-teal-tint`;
+const small = 'inline-flex h-8 items-center rounded-md px-3 text-sm font-medium';
 
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <header className="bg-teal-deep text-white">
-        <div className="mx-auto max-w-5xl px-5 pt-6 pb-16 md:px-8 md:pb-24">
-          <Wordmark className="h-8 w-auto text-white" />
-          <div className="mt-14 max-w-2xl md:mt-24">
-            <h1 className="text-4xl leading-tight font-bold tracking-tight md:text-6xl">Saoi</h1>
-            <p className="text-teal-tint mt-4 text-xl md:text-2xl">
-              An open-source financial concierge for Ireland. Baz is the assistant inside it.
-            </p>
-            <p className="text-teal-tint/80 mt-4 text-base">
-              Saoi is Irish for a sage, and you say it &ldquo;see&rdquo;.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={links.app}
-                className={`${buttonBase} text-teal-deep hover:bg-teal-tint bg-white`}
-              >
-                Open the app
-              </a>
-              <a
-                href={links.showcase}
-                className={`${buttonBase} border border-white/40 text-white hover:bg-white/10`}
-              >
-                See the showcase
-              </a>
-            </div>
-          </div>
+    <div className="bg-ink/[0.04] min-h-dvh">
+      <header className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 px-5 py-5 sm:px-6">
+        <div className="flex items-center gap-3">
+          <Wordmark className="text-ink h-7 w-auto" />
+          <span className="bg-line hidden h-5 w-px sm:block" />
+          <span className="text-muted hidden text-sm sm:block">A proof of concept</span>
         </div>
+        <nav aria-label="Site" className="flex items-center gap-1 sm:gap-2">
+          <a
+            href={links.howItWorks}
+            className={`${small} text-ink hover:bg-teal-tint hidden sm:inline-flex`}
+          >
+            How it works
+          </a>
+          <a
+            href={links.article}
+            className={`${small} text-ink hover:bg-teal-tint hidden sm:inline-flex`}
+          >
+            The article
+          </a>
+          <a href={links.app} className={`${small} bg-teal hover:bg-teal/90 text-white`}>
+            Open Baz
+          </a>
+        </nav>
       </header>
 
-      <main>
-        <section className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20" aria-labelledby="does">
-          <h2 id="does" className="text-ink text-2xl font-bold tracking-tight md:text-3xl">
-            What Baz does
-          </h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-            {doing.map((d) => (
-              <li key={d.title} className="border-line rounded-2xl border bg-white p-6">
-                <h3 className="text-ink text-lg font-semibold">{d.title}</h3>
-                <p className="mt-2">{d.body}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="bg-teal-tint/50" aria-labelledby="how">
-          <div className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20">
-            <h2 id="how" className="text-ink text-2xl font-bold tracking-tight md:text-3xl">
-              How it works
-            </h2>
-            <ol className="mt-8 grid gap-4 md:grid-cols-3">
-              {steps.map((s, i) => (
-                <li key={s.title} className="rounded-2xl bg-white p-6">
-                  <span className="text-teal text-sm font-semibold">Step {i + 1}</span>
-                  <h3 className="text-ink mt-1 text-lg font-semibold">{s.title}</h3>
-                  <p className="mt-2">{s.body}</p>
-                </li>
-              ))}
-            </ol>
-            <p className="mt-6">
-              <a
-                href={links.howItWorks}
-                className="text-teal font-semibold underline underline-offset-4"
-                {...external}
-              >
-                Read how it works on the showcase
-              </a>
-            </p>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20" aria-labelledby="open">
-          <h2 id="open" className="text-ink text-2xl font-bold tracking-tight md:text-3xl">
-            Built in the open
-          </h2>
-          <p className="mt-3 max-w-2xl">
-            Saoi is AGPL-3.0 and developed in public. Today it is a proof of concept running on
-            synthetic Demo Bank data. Read it, run it, break it.
+      <main className="mx-auto w-full max-w-[1200px] px-5 pb-16 sm:px-6">
+        <section className="py-8 lg:py-16">
+          <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
+            Saoi · Conversational banking
           </p>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-            {open.map((o) => (
-              <li key={o.label}>
-                <a
-                  href={o.href}
-                  className="border-line hover:border-teal block h-full rounded-2xl border bg-white p-5"
-                  {...external}
-                >
-                  <span className="text-ink block font-semibold break-words">{o.label}</span>
-                  <span className="text-muted mt-1 block text-sm">{o.note}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <h1 className="text-ink mt-4 max-w-[14ch] text-[2.75rem] leading-[1.02] font-bold tracking-tight text-balance sm:text-6xl xl:text-7xl">
+            A personal banker for everyone.
+          </h1>
+          <p className="text-muted mt-6 max-w-[44ch] text-lg leading-snug text-pretty sm:text-2xl">
+            Saoi is an open-source financial concierge for Ireland. Tell Baz, the assistant inside
+            it, what you&rsquo;re trying to do and it will help you work through it. One
+            conversation, not a product menu, and nothing you say is asked for twice.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a href={links.app} className={primary}>
+              Open the app
+            </a>
+            <a href={links.showcase} className={outline}>
+              See the showcase
+            </a>
+            <a href={links.howItWorks} className={ghost}>
+              How it works
+            </a>
+          </div>
+          <p className="text-muted mt-5 max-w-[60ch] text-sm">
+            A working prototype. Saoi is not a bank and is not regulated yet, so it only touches
+            synthetic data. Use made-up details; nothing you do here reaches a bank.
+          </p>
         </section>
 
-        <section className="bg-teal-deep text-white" aria-labelledby="going">
-          <div className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20">
-            <h2 id="going" className="text-2xl font-bold tracking-tight md:text-3xl">
-              Where this is going
-            </h2>
-            <div className="text-teal-tint mt-4 max-w-2xl space-y-4">
-              <p>
-                Open banking lets you share your own account data with a service you choose. Saoi is
-                heading for registration with the Central Bank of Ireland as an account information
-                service provider, directly, with no partner in the middle.
+        <section
+          className="border-line grid gap-8 border-t py-12 sm:grid-cols-3 sm:gap-10 lg:py-16"
+          aria-label="What Baz does"
+        >
+          {points.map((p) => (
+            <div key={p.number}>
+              <p className="text-teal font-mono text-[11px] font-medium tracking-[0.18em] uppercase">
+                {p.number}
               </p>
-              <p>
-                To be plain about it: Saoi is not a bank, and it is not regulated yet. Until it is,
-                it only touches synthetic data.
-              </p>
-              <p className="text-white">
-                Ní bhíonn saoi gan locht. No sage is without fault. We will say where we are wrong.
-              </p>
+              <h2 className="text-ink mt-3 text-2xl font-bold tracking-tight text-balance">
+                {p.title}
+              </h2>
+              <p className="text-muted mt-3 max-w-[36ch] leading-relaxed text-pretty">{p.body}</p>
+            </div>
+          ))}
+        </section>
+
+        <section className="mt-6 grid gap-6 md:grid-cols-2">
+          <div className="border-line flex flex-col rounded-xl border bg-white p-6 shadow-xs sm:p-7">
+            <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
+              Meet the assistant
+            </p>
+            <BazWordmark className="text-baz mt-4 h-9 w-auto self-start" />
+            <p className="text-muted mt-3 flex-1 text-sm leading-relaxed text-pretty">
+              Baz is the assistant inside Saoi. Open it on your phone or in the browser, and add it
+              to your home screen if you want it to feel like any other app.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <a href={links.app} className={`${small} bg-teal hover:bg-teal/90 text-white`}>
+                Open Baz
+              </a>
+            </div>
+          </div>
+          <div className="border-line flex flex-col rounded-xl border bg-white p-6 shadow-xs sm:p-7">
+            <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
+              The thinking
+            </p>
+            <p className="text-ink mt-3 text-xl font-bold tracking-tight text-balance">
+              Who owns the customer relationship in the age of AI?
+            </p>
+            <p className="text-muted mt-2 flex-1 text-sm leading-relaxed text-pretty">
+              The opportunity for conversational banking, the risk of disintermediation, and why Baz
+              explores both. A short article, with its sources.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <a href={links.article} className={`${small} border-line text-ink border bg-white`}>
+                Read the article
+              </a>
+              <a href={links.howItWorks} className={`${small} text-ink hover:bg-teal-tint`}>
+                How Baz works
+              </a>
             </div>
           </div>
         </section>
-      </main>
 
-      <footer className="border-line border-t">
-        <div className="mx-auto flex max-w-5xl flex-col gap-4 px-5 py-8 text-sm md:flex-row md:items-center md:justify-between md:px-8">
-          <p>Saoi is Baz&rsquo;s home.</p>
-          <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2">
-            <a href={links.privacy} className="underline underline-offset-4">
-              Privacy
-            </a>
-            <a href={links.licence} className="underline underline-offset-4" {...external}>
-              AGPL-3.0 licence
-            </a>
+        <footer className="text-muted border-line mt-14 flex flex-wrap items-start justify-between gap-4 border-t pt-6 text-sm">
+          <div className="max-w-[60ch] space-y-2">
+            <p>
+              A prototype, not a banking service. Saoi is not a bank, it is not regulated yet, and
+              it runs on synthetic data.{' '}
+              <a href={links.privacy} className="underline underline-offset-4">
+                How your data is used
+              </a>
+            </p>
+            <p>
+              Open source under the{' '}
+              <a href={links.licence} className="underline underline-offset-4" {...external}>
+                AGPL-3.0 licence
+              </a>
+              .
+            </p>
+          </div>
+          <nav aria-label="Footer" className="flex max-w-md flex-wrap gap-x-4 gap-y-2">
+            {footerLinks.map((l) => (
+              <a key={l.label} href={l.href} className="hover:text-ink">
+                {l.label}
+              </a>
+            ))}
           </nav>
-        </div>
-      </footer>
+        </footer>
+      </main>
     </div>
   );
 }

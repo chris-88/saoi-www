@@ -1,6 +1,7 @@
 export const links = {
   app: 'https://app.saoi.ie/',
   showcase: 'https://showcase.saoi.ie/',
+  article: 'https://showcase.saoi.ie/#/article',
   howItWorks: 'https://showcase.saoi.ie/#/how-it-works',
   docs: 'https://docs.saoi.ie/',
   mcp: 'https://mcp.saoi.ie/mcp',
