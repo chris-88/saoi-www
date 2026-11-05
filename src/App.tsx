@@ -37,7 +37,7 @@ const button =
 const primary = `${button} bg-teal text-white hover:bg-teal/90`;
 const outline = `${button} border-line text-ink border bg-white shadow-xs hover:bg-teal-tint`;
 const ghost = `${button} text-ink hover:bg-teal-tint`;
-const small = 'inline-flex h-8 items-center rounded-md px-3 text-sm font-medium';
+const small = 'inline-flex whitespace-nowrap h-8 items-center rounded-md px-3 text-sm font-medium';
 
 export default function App() {
   return (
@@ -51,14 +51,11 @@ export default function App() {
         <nav aria-label="Site" className="flex items-center gap-1 sm:gap-2">
           <a
             href={links.howItWorks}
-            className={`${small} text-ink hover:bg-teal-tint hidden sm:inline-flex`}
+            className={`${small} text-ink hover:bg-teal-tint max-sm:hidden`}
           >
             How it works
           </a>
-          <a
-            href={links.article}
-            className={`${small} text-ink hover:bg-teal-tint hidden sm:inline-flex`}
-          >
+          <a href={links.article} className={`${small} text-ink hover:bg-teal-tint max-sm:hidden`}>
             The article
           </a>
           <a href={links.app} className={`${small} bg-teal hover:bg-teal/90 text-white`}>
