@@ -15,7 +15,7 @@ describe('App', () => {
       expect(screen.getByRole('heading', { name })).toBeInTheDocument();
     }
     expect(screen.getByRole('img', { name: 'Saoi' })).toBeInTheDocument();
-    expect(screen.getByRole('img', { name: 'Baz' })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Saoirse' })).toBeInTheDocument();
   });
 
   it('links to the app, showcase and the footer destinations', () => {

@@ -4,7 +4,7 @@ Guidance for the development agent working on this project. Treat the **Definiti
 
 ## What this is
 
-The landing site for Saoi (`saoi.ie`): one static page that says what Saoi and Baz are and points to the app, showcase, docs, MCP endpoint, API and source. No backend, no router, no data fetching. Copy is in Chris's voice: direct, plain, no marketing words, no em dashes. Never mention any employer.
+The landing site for Saoi (`saoi.ie`): one static page that says what Saoi and Saoirse are and points to the app, showcase, docs, MCP endpoint, API and source. No backend, no router, no data fetching. Copy is in Chris's voice: direct, plain, no marketing words, no em dashes. Never mention any employer.
 
 | Concern       | Choice                                                                               |
 | ------------- | ------------------------------------------------------------------------------------ |

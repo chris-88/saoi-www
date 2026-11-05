@@ -8,7 +8,7 @@ const points = [
   {
     number: '01',
     title: 'Start with your life, not a product.',
-    body: 'Married, a baby on the way, hoping to buy. Say what is going on and Baz works out what it involves and which of the bank’s products fit.',
+    body: 'Married, a baby on the way, hoping to buy. Say what is going on and Saoirse works out what it involves and which of the bank’s products fit.',
   },
   {
     number: '02',
@@ -59,7 +59,7 @@ export default function App() {
             The article
           </a>
           <a href={links.app} className={`${small} bg-teal hover:bg-teal/90 text-white`}>
-            Open Baz
+            Open Saoirse
           </a>
         </nav>
       </header>
@@ -73,8 +73,8 @@ export default function App() {
             A personal banker for everyone.
           </h1>
           <p className="text-muted mt-6 max-w-[44ch] text-lg leading-snug text-pretty sm:text-2xl">
-            Saoi is an open-source financial concierge for Ireland. Tell Baz, the assistant inside
-            it, what you&rsquo;re trying to do and it will help you work through it. One
+            Saoi is an open-source financial concierge for Ireland. Tell Saoirse, the assistant
+            inside it, what you&rsquo;re trying to do and it will help you work through it. One
             conversation, not a product menu, and nothing you say is asked for twice.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -96,7 +96,7 @@ export default function App() {
 
         <section
           className="border-line grid gap-8 border-t py-12 sm:grid-cols-3 sm:gap-10 lg:py-16"
-          aria-label="What Baz does"
+          aria-label="What Saoirse does"
         >
           {points.map((p) => (
             <div key={p.number}>
@@ -117,13 +117,14 @@ export default function App() {
               Meet the assistant
             </p>
             <BazWordmark className="text-baz mt-4 h-9 w-auto self-start" />
+            <p className="text-muted mt-1 text-xs">Saoirse, say SEER-sha</p>
             <p className="text-muted mt-3 flex-1 text-sm leading-relaxed text-pretty">
-              Baz is the assistant inside Saoi. Open it on your phone or in the browser, and add it
-              to your home screen if you want it to feel like any other app.
+              Saoirse is the assistant inside Saoi. Open it on your phone or in the browser, and add
+              it to your home screen if you want it to feel like any other app.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <a href={links.app} className={`${small} bg-teal hover:bg-teal/90 text-white`}>
-                Open Baz
+                Open Saoirse
               </a>
             </div>
           </div>
@@ -135,15 +136,15 @@ export default function App() {
               Who owns the customer relationship in the age of AI?
             </p>
             <p className="text-muted mt-2 flex-1 text-sm leading-relaxed text-pretty">
-              The opportunity for conversational banking, the risk of disintermediation, and why Baz
-              explores both. A short article, with its sources.
+              The opportunity for conversational banking, the risk of disintermediation, and why
+              Saoirse explores both. A short article, with its sources.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <a href={links.article} className={`${small} border-line text-ink border bg-white`}>
                 Read the article
               </a>
               <a href={links.howItWorks} className={`${small} text-ink hover:bg-teal-tint`}>
-                How Baz works
+                How Saoirse works
               </a>
             </div>
           </div>

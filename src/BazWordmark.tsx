@@ -1,6 +1,6 @@
 export function BazWordmark({ className = '' }: { className?: string }) {
   return (
-    <svg viewBox="0 0 194 72" role="img" aria-label="Baz" className={className}>
+    <svg viewBox="0 0 194 72" role="img" aria-label="Saoirse" className={className}>
       {/* b */}
       <circle cx="32" cy="40" r="24.5" fill="none" stroke="currentColor" strokeWidth="15" />
       <circle cx="26" cy="37" r="3" fill="currentColor" />

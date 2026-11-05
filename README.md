@@ -1,6 +1,6 @@
 # saoi-www
 
-Landing site for Saoi, an open-source financial concierge for Ireland. Baz is the assistant inside it. Live at https://saoi.ie.
+Landing site for Saoi, an open-source financial concierge for Ireland. Saoirse is the assistant inside it. Live at https://saoi.ie.
 
 ```
 npm install && npm run dev
