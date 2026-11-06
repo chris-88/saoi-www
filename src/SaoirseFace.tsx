@@ -1,8 +1,7 @@
 export function SaoirseFace({ className = '' }: { className?: string }) {
   return (
     <svg
-      role="img"
-      aria-label="Saoirse"
+      aria-hidden="true"
       viewBox="0 0 64 72"
       fill="none"
       className={className}
