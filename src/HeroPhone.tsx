@@ -113,6 +113,25 @@ export function HeroPhone(): ReactNode {
               </div>
             </div>
           </div>
+
+          <div className="border-line bg-paper flex shrink-0 items-end gap-2 border-t px-4 pt-2.5 pb-2.5">
+            <div className="border-line text-muted min-w-0 flex-1 truncate rounded-3xl border bg-white px-4 py-0.5 text-sm leading-6">
+              We’re hoping to buy a place next year…
+            </div>
+            <span className="bg-teal grid size-8 shrink-0 place-items-center rounded-full text-white opacity-40">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="size-4"
+              >
+                <path d="m5 12 7-7 7 7M12 19V5" />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
     </div>
