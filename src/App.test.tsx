@@ -17,6 +17,10 @@ describe('App', () => {
     expect(screen.getByRole('img', { name: 'Saoi' })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: 'Saoirse' })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /rolls up into Saoirse/ })).toBeInTheDocument();
+    const phone = screen.getByRole('img', { name: 'Saoirse, as it looks on a phone' });
+    expect(phone).toBeInTheDocument();
+    expect(phone).toHaveTextContent('Buy our first home');
+    expect(phone).toHaveTextContent('Saved. You can change or stop it any time.');
     expect(screen.getByText('Saoirse, say SEER-sha')).toBeInTheDocument();
   });
 

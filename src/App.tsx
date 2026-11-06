@@ -1,3 +1,4 @@
+import { HeroPhone } from './HeroPhone';
 import { LogoAnimation } from './LogoAnimation';
 import { links } from './links';
 import { SaoirseWordmark } from './SaoirseWordmark';
@@ -66,33 +67,36 @@ export default function App() {
       </header>
 
       <main className="mx-auto w-full max-w-[1200px] px-5 pb-16 sm:px-6">
-        <section className="py-8 lg:py-16">
-          <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
-            Saoi · Conversational banking
-          </p>
-          <h1 className="text-ink mt-4 max-w-[14ch] text-[2.75rem] leading-[1.02] font-bold tracking-tight text-balance sm:text-6xl xl:text-7xl">
-            A personal banker for everyone.
-          </h1>
-          <p className="text-muted mt-6 max-w-[44ch] text-lg leading-snug text-pretty sm:text-2xl">
-            Saoi is an open-source financial concierge for Ireland. Tell Saoirse, the assistant
-            inside it, what you&rsquo;re trying to do and it will help you work through it. One
-            conversation, not a product menu, and nothing you say is asked for twice.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href={links.app} className={primary}>
-              Open the app
-            </a>
-            <a href={links.showcase} className={outline}>
-              See the showcase
-            </a>
-            <a href={links.howItWorks} className={ghost}>
-              How it works
-            </a>
+        <section className="grid items-center gap-10 py-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16 lg:py-16">
+          <div>
+            <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
+              Saoi · Conversational banking
+            </p>
+            <h1 className="text-ink mt-4 max-w-[14ch] text-[2.75rem] leading-[1.02] font-bold tracking-tight text-balance sm:text-6xl xl:text-7xl">
+              A personal banker for everyone.
+            </h1>
+            <p className="text-muted mt-6 max-w-[44ch] text-lg leading-snug text-pretty sm:text-2xl">
+              Saoi is an open-source financial concierge for Ireland. Tell Saoirse, the assistant
+              inside it, what you&rsquo;re trying to do and it will help you work through it. One
+              conversation, not a product menu, and nothing you say is asked for twice.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <a href={links.app} className={primary}>
+                Open the app
+              </a>
+              <a href={links.showcase} className={outline}>
+                See the showcase
+              </a>
+              <a href={links.howItWorks} className={ghost}>
+                How it works
+              </a>
+            </div>
+            <p className="text-muted mt-5 max-w-[60ch] text-sm">
+              A working prototype. Saoi is not a bank and is not regulated yet, so it only touches
+              synthetic data. Use made-up details; nothing you do here reaches a bank.
+            </p>
           </div>
-          <p className="text-muted mt-5 max-w-[60ch] text-sm">
-            A working prototype. Saoi is not a bank and is not regulated yet, so it only touches
-            synthetic data. Use made-up details; nothing you do here reaches a bank.
-          </p>
+          <HeroPhone />
         </section>
 
         <section
