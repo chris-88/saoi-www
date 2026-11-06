@@ -1,4 +1,4 @@
-import { SaoirseFace } from './SaoirseFace';
+import { LogoAnimation } from './LogoAnimation';
 import { links } from './links';
 import { SaoirseWordmark } from './SaoirseWordmark';
 import { Wordmark } from './Wordmark';
@@ -113,35 +113,37 @@ export default function App() {
         </section>
 
         <section className="mt-6 grid gap-6 md:grid-cols-2">
-          <div className="border-line flex flex-col rounded-xl border bg-white p-6 shadow-xs sm:p-7">
-            <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
-              Meet the assistant
-            </p>
-            <div className="mt-4 flex items-center gap-3">
-              <SaoirseFace className="text-saoi h-9 w-auto" />
-              <h2 className="text-saoi flex">
+          <div className="border-line grid items-center gap-6 rounded-xl border bg-white p-6 shadow-xs sm:p-7 md:col-span-2 md:grid-cols-2 md:gap-10">
+            <div className="order-first md:order-last">
+              <LogoAnimation />
+            </div>
+            <div className="flex flex-col">
+              <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
+                Meet the assistant
+              </p>
+              <h2 className="text-saoi mt-4 flex">
                 <SaoirseWordmark className="h-7 w-auto" />
               </h2>
-            </div>
-            <p className="text-muted mt-1 text-xs">Saoirse, say SEER-sha</p>
-            <p className="text-muted mt-3 flex-1 text-sm leading-relaxed text-pretty">
-              Saoirse is the assistant inside Saoi. Open it on your phone or in the browser, and add
-              it to your home screen if you want it to feel like any other app.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              <a href={links.app} className={`${small} bg-teal hover:bg-teal/90 text-white`}>
-                Open Saoirse
-              </a>
+              <p className="text-muted mt-1 text-xs">Saoirse, say SEER-sha</p>
+              <p className="text-muted mt-3 flex-1 text-sm leading-relaxed text-pretty">
+                Saoirse is the assistant inside Saoi. Open it on your phone or in the browser, and
+                add it to your home screen if you want it to feel like any other app.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <a href={links.app} className={`${small} bg-teal hover:bg-teal/90 text-white`}>
+                  Open Saoirse
+                </a>
+              </div>
             </div>
           </div>
-          <div className="border-line flex flex-col rounded-xl border bg-white p-6 shadow-xs sm:p-7">
+          <div className="border-line flex flex-col rounded-xl border bg-white p-6 shadow-xs sm:p-7 md:col-span-2">
             <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
               The thinking
             </p>
-            <p className="text-ink mt-3 text-xl font-bold tracking-tight text-balance">
+            <p className="text-ink mt-3 max-w-[60ch] text-xl font-bold tracking-tight text-balance">
               Who owns the customer relationship in the age of AI?
             </p>
-            <p className="text-muted mt-2 flex-1 text-sm leading-relaxed text-pretty">
+            <p className="text-muted mt-2 max-w-[60ch] flex-1 text-sm leading-relaxed text-pretty">
               The opportunity for conversational banking, the risk of disintermediation, and why
               Saoirse explores both. A short article, with its sources.
             </p>
