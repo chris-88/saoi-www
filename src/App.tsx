@@ -1,4 +1,4 @@
-import { BazWordmark } from './BazWordmark';
+import { SaoirseFace } from './SaoirseFace';
 import { links } from './links';
 import { Wordmark } from './Wordmark';
 
@@ -116,7 +116,10 @@ export default function App() {
             <p className="text-muted font-mono text-[11px] font-medium tracking-[0.14em] uppercase">
               Meet the assistant
             </p>
-            <BazWordmark className="text-baz mt-4 h-9 w-auto self-start" />
+            <div className="mt-4 flex items-center gap-3">
+              <SaoirseFace className="text-baz h-9 w-auto" />
+              <h2 className="text-ink text-2xl font-bold tracking-tight">Saoirse</h2>
+            </div>
             <p className="text-muted mt-1 text-xs">Saoirse, say SEER-sha</p>
             <p className="text-muted mt-3 flex-1 text-sm leading-relaxed text-pretty">
               Saoirse is the assistant inside Saoi. Open it on your phone or in the browser, and add
