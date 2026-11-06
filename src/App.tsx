@@ -1,5 +1,6 @@
 import { SaoirseFace } from './SaoirseFace';
 import { links } from './links';
+import { SaoirseWordmark } from './SaoirseWordmark';
 import { Wordmark } from './Wordmark';
 
 const external = { target: '_blank', rel: 'noreferrer' } as const;
@@ -118,7 +119,9 @@ export default function App() {
             </p>
             <div className="mt-4 flex items-center gap-3">
               <SaoirseFace className="text-saoi h-9 w-auto" />
-              <h2 className="text-ink text-2xl font-bold tracking-tight">Saoirse</h2>
+              <h2 className="text-saoi flex">
+                <SaoirseWordmark className="h-6 w-auto" />
+              </h2>
             </div>
             <p className="text-muted mt-1 text-xs">Saoirse, say SEER-sha</p>
             <p className="text-muted mt-3 flex-1 text-sm leading-relaxed text-pretty">
