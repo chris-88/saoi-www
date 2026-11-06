@@ -44,7 +44,7 @@ export default function App() {
     <div className="bg-ink/[0.04] min-h-dvh">
       <header className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 px-5 py-5 sm:px-6">
         <div className="flex items-center gap-3">
-          <Wordmark className="text-ink h-7 w-auto" />
+          <Wordmark className="text-baz h-7 w-auto" />
           <span className="bg-line hidden h-5 w-px sm:block" />
           <span className="text-muted hidden text-sm sm:block">A proof of concept</span>
         </div>
