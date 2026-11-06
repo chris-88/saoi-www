@@ -120,7 +120,7 @@ export default function App() {
             <div className="mt-4 flex items-center gap-3">
               <SaoirseFace className="text-saoi h-9 w-auto" />
               <h2 className="text-saoi flex">
-                <SaoirseWordmark className="h-6 w-auto" />
+                <SaoirseWordmark className="h-7 w-auto" />
               </h2>
             </div>
             <p className="text-muted mt-1 text-xs">Saoirse, say SEER-sha</p>
