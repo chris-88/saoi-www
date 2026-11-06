@@ -44,7 +44,7 @@ export default function App() {
     <div className="bg-ink/[0.04] min-h-dvh">
       <header className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 px-5 py-5 sm:px-6">
         <div className="flex items-center gap-3">
-          <Wordmark className="text-baz h-7 w-auto" />
+          <Wordmark className="text-saoi h-7 w-auto" />
           <span className="bg-line hidden h-5 w-px sm:block" />
           <span className="text-muted hidden text-sm sm:block">A proof of concept</span>
         </div>
@@ -117,7 +117,7 @@ export default function App() {
               Meet the assistant
             </p>
             <div className="mt-4 flex items-center gap-3">
-              <SaoirseFace className="text-baz h-9 w-auto" />
+              <SaoirseFace className="text-saoi h-9 w-auto" />
               <h2 className="text-ink text-2xl font-bold tracking-tight">Saoirse</h2>
             </div>
             <p className="text-muted mt-1 text-xs">Saoirse, say SEER-sha</p>

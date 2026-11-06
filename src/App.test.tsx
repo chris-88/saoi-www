@@ -25,7 +25,7 @@ describe('App', () => {
     expect(hrefs('Open the app')).toEqual(['https://app.saoi.ie/']);
     expect(hrefs('See the showcase')).toEqual(['https://showcase.saoi.ie/']);
     expect(hrefs('Docs')).toEqual(['https://docs.saoi.ie/']);
-    expect(hrefs('GitHub')).toEqual(['https://github.com/chris-88/baz-conversational-banking']);
+    expect(hrefs('GitHub')).toEqual(['https://github.com/chris-88/saoi']);
     expect(hrefs('API')).toEqual(['https://api.saoi.ie/api/openapi.json']);
     expect(hrefs('MCP')).toEqual(['https://mcp.saoi.ie/mcp']);
     expect(hrefs('AGPL-3.0 licence')).toEqual(['https://www.gnu.org/licenses/agpl-3.0.html']);
