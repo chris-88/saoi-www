@@ -32,6 +32,8 @@ const footerLinks = [
   { label: 'GitHub', href: links.repoApp },
   { label: 'API', href: links.api },
   { label: 'MCP', href: links.mcp },
+  { label: 'Terms', href: links.terms },
+  { label: 'Privacy', href: links.privacyNotice },
 ];
 
 const button =

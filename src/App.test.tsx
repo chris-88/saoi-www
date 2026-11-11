@@ -34,6 +34,8 @@ describe('App', () => {
     expect(hrefs('GitHub')).toEqual(['https://github.com/chris-88/saoi']);
     expect(hrefs('API')).toEqual(['https://api.saoi.ie/api/openapi.json']);
     expect(hrefs('MCP')).toEqual(['https://mcp.saoi.ie/mcp']);
+    expect(hrefs('Terms')).toEqual(['/terms/']);
+    expect(hrefs('Privacy')).toEqual(['/privacy/']);
     expect(hrefs('AGPL-3.0 licence')).toEqual(['https://www.gnu.org/licenses/agpl-3.0.html']);
   });
 

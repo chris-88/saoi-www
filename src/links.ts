@@ -1,4 +1,7 @@
 export const links = {
+  home: '/',
+  terms: '/terms/',
+  privacyNotice: '/privacy/',
   app: 'https://app.saoi.ie/',
   showcase: 'https://showcase.saoi.ie/',
   article: 'https://showcase.saoi.ie/#/article',
