@@ -7,7 +7,7 @@ import { LegalPage, Section } from './LegalPage';
  * change the app's wording first, then copy it here. The app's em dashes are written here as
  * commas, colons or brackets.
  */
-const contact = 'baz@chrisquinn.ie';
+const contact = 'contact@saoi.ie';
 
 export function Privacy(): ReactNode {
   return (

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { LegalPage, Section } from './LegalPage';
 
-const contact = 'baz@chrisquinn.ie';
+const contact = 'contact@saoi.ie';
 
 const sections: { title: string; body: string }[] = [
   {

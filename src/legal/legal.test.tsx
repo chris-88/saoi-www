@@ -28,9 +28,9 @@ describe('Terms', () => {
       'Contact',
     ]);
     expect(screen.getByText(/Saoi gives information, not advice\./)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'baz@chrisquinn.ie' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'contact@saoi.ie' })).toHaveAttribute(
       'href',
-      'mailto:baz@chrisquinn.ie',
+      'mailto:contact@saoi.ie',
     );
   });
 
@@ -67,9 +67,9 @@ describe('Privacy', () => {
         'If you sign in with Google, Saoi receives the name and email address on that account and nothing else.',
       ),
     ).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'baz@chrisquinn.ie' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'contact@saoi.ie' })).toHaveAttribute(
       'href',
-      'mailto:baz@chrisquinn.ie',
+      'mailto:contact@saoi.ie',
     );
   });
 
